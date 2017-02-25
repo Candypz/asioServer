@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{c49a0c02-e460-4a37-a7d8-ee1c2b848300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\proto">
+      <UniqueIdentifier>{81691ec7-c22f-4459-ae74-261f81445e88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\message">
+      <UniqueIdentifier>{1551c7cf-262c-49ac-80c0-dfd1fb3d494b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\config">
+      <UniqueIdentifier>{eaea559c-bcff-409a-ae1a-a42f98359389}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tool">
+      <UniqueIdentifier>{e17b88df-1263-429b-96ca-c31208a65f1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\log">
+      <UniqueIdentifier>{87074371-4e70-4c08-ad89-5fe9e32ab784}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\server">
+      <UniqueIdentifier>{aa6989cf-3000-4d91-8ba6-c86ab6f7a128}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\tool\json">
+      <UniqueIdentifier>{5fd9b479-6fa1-4ce7-91e0-3cf85e04b739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\server\base">
+      <UniqueIdentifier>{5402117e-c58f-4090-9c93-1873e3ed26fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\proto\addressbook.pb.cc">
+      <Filter>src\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tool\Tools.cpp">
+      <Filter>src\tool</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message\MessageDataBase.cpp">
+      <Filter>src\message</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message\MessageBase.cpp">
+      <Filter>src\message</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message\OneMessage.cpp">
+      <Filter>src\message</Filter>
+    </ClCompile>
+    <ClCompile Include="src\log\Logger.cpp">
+      <Filter>src\log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\message\MessageManage.cpp">
+      <Filter>src\message</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tool\json\json_reader.cpp">
+      <Filter>src\tool\json</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tool\json\json_value.cpp">
+      <Filter>src\tool\json</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tool\json\json_writer.cpp">
+      <Filter>src\tool\json</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\base\ServerBase.cpp">
+      <Filter>src\server\base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server\base\Session.cpp">
+      <Filter>src\server\base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\proto\addressbook.pb.h">
+      <Filter>src\proto</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\ConfigDefin.h">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\Tools.h">
+      <Filter>src\tool</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message\MessageDataBase.h">
+      <Filter>src\message</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message\MessageBase.h">
+      <Filter>src\message</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message\OneMessage.h">
+      <Filter>src\message</Filter>
+    </ClInclude>
+    <ClInclude Include="src\log\Logger.h">
+      <Filter>src\log</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\Singleton.h">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\message\MessageManage.h">
+      <Filter>src\message</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\NonCopyable.h">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\config\MessageConfig.h">
+      <Filter>src\config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\autolink.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\config.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\features.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\forwards.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\json.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\json_batchallocator.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\reader.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\value.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tool\json\writer.h">
+      <Filter>src\tool\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\server\base\ServerBase.h">
+      <Filter>src\server\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\server\base\ServerNameSpace.h">
+      <Filter>src\server\base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\server\base\Session.h">
+      <Filter>src\server\base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\tool\json\json_internalarray.inl">
+      <Filter>src\tool\json</Filter>
+    </None>
+    <None Include="src\tool\json\json_internalmap.inl">
+      <Filter>src\tool\json</Filter>
+    </None>
+    <None Include="src\tool\json\json_valueiterator.inl">
+      <Filter>src\tool\json</Filter>
+    </None>
+  </ItemGroup>
+</Project>
