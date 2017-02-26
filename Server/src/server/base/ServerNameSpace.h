@@ -19,6 +19,9 @@ namespace Server {
     using tcpSocket = ipTcp::socket;
     using asioSterambuf = boost::asio::streambuf;
     using boostError = boost::system::error_code;
+    using boostTime = boost::posix_time::ptime;
+    using boostTimeDuration = boost::posix_time::millisec_posix_time_system_config::time_duration_type;
+    using boostSecondClock = boost::posix_time::second_clock;
 };
 
 #endif // SERVERNAMESPACE_H_

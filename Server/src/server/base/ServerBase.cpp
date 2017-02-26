@@ -33,6 +33,10 @@ void CServerBase::handleAccept(sessionPtr session, const boostError &error) {
     sessionPtr nextSession(new CSession(m_ioServer));
     m_sessionList.push_back(session);
 
+    for (const auto &it : m_sessionList) {
+        it->send("111");
+    }
+
     m_acceptor.async_accept(nextSession->getSocket(), boost::bind(&CServerBase::handleAccept,
         this,
         nextSession,

@@ -32,10 +32,8 @@ int main(int argc, char* argv[]) {
     try {
         GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-        Log::CLogger::initLog("serverLog");
+        //Log::CLogger::initLog("serverLog");
         LOG_INFO << "server start";
-
-        //text();
 
         CSingleton<Message::CMessageManage>::initInstance();
 

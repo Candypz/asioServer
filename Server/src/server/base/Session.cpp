@@ -1,5 +1,10 @@
 #include "Session.h"
+#include "addressbook.pb.h"
+#include "Logger.h"
+#include "ConfigDefin.h"
 #include <boost/bind.hpp>
+#include <boost/progress.hpp>
+#include <boost/date_time.hpp>
 
 
 using namespace Server;
@@ -16,6 +21,8 @@ void CSession::start() {
     static ipTcp::no_delay _option(true);
     m_socket.set_option(_option);
 
+    m_connectTime = boostSecondClock::local_time();
+
     m_socket.async_receive(boost::asio::buffer(m_readBuffer),
         boost::bind(&CSession::receiveHandler,
             shared_from_this(),
@@ -23,7 +30,7 @@ void CSession::start() {
             boost::asio::placeholders::bytes_transferred));
 }
 
-void CSession::stop() {
+void CSession::close() {
     m_socket.close();
 }
 
@@ -46,7 +53,15 @@ void CSession::receiveHandler(const boostError &error, size_t bytes) {
             boost::asio::placeholders::error,
             boost::asio::placeholders::bytes_transferred));
 
-    send("111");
+    helloworld _re;
+    _re.set_id(100000);
+    _re.set_str("100000000000");
+    _re.set_opt(100000);
+
+    std::string _buff;
+    _re.SerializePartialToString(&_buff);
+
+    send(_buff);
 }
 
 void CSession::parseFrame(const boostError &error, size_t bytes) {
@@ -70,9 +85,18 @@ void CSession::send(const std::string &data) {
 
 void CSession::sendHandler(const boostError &error,const std::string data) {
     if (!error) {
-
+        auto _connectDiff = boostSecondClock::local_time() - m_connectTime;
+        LOG_INFO << _connectDiff.total_seconds();
     }
     else {
-        send(data);
+        //send(data);
+        LOG_ERROR << "send error:" << error;
+    }
+}
+
+void CSession::listenShutdown() {
+    auto _connectDiff = boostSecondClock::local_time() - m_connectTime;
+    if (_connectDiff.total_seconds() > CLIENT_TIMEOUT) {
+        //do close;
     }
 }

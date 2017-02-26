@@ -19,14 +19,16 @@ namespace Server {
 
         void start();
         tcpSocket &getSocket();
-        void stop();
+        void close();
 
         void send(const std::string &data);
     private:
         void receiveHandler(const boostError &error, size_t bytes);
         void sendHandler(const boostError &error, const std::string data);
         void parseFrame(const boostError &error, size_t bytes);
+        void listenShutdown();
 
+        boostTime m_connectTime;
         tcpSocket m_socket;
         unsigned char m_readBuffer[1024];
         unsigned char m_writeBuffer[1024];
